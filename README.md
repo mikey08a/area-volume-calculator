@@ -1,4 +1,4 @@
-# area-volume-calculator
+# Area/Volume Calculator
 Calculates area and volume of selected shapes
 
 ## Textbook Problem
