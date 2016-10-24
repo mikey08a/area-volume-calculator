@@ -1,5 +1,6 @@
 package areacalc;   
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import javafx.application.Application;
 import javafx.beans.value.ChangeListener;
@@ -13,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Border;
 import javafx.scene.layout.BorderStroke;
@@ -38,6 +40,12 @@ public class AreaCalc extends Application {
     @Override
     public void start(Stage primaryStage) {
         stage = primaryStage;
+        stage.setTitle("Calculator");
+        stage.setAlwaysOnTop(true);
+        InputStream temp = getClass().getResourceAsStream("Calculator.png");
+        Image img = new Image(temp,20,20,false,false);
+        stage.getIcons().add(img);
+        stage.setResizable(false);
         
         //Create layout
         root = new VBox();
